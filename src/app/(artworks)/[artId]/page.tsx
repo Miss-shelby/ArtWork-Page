@@ -24,6 +24,15 @@ type ArtParams = {
       iiif_url: string;
     };
   };
+  
+  export const generateMetadata = async ({params}:ArtParams)=>{
+    const response = await fetch(`https://api.artic.edu/api/v1/artworks/${params.artId}`);
+    const data: ArtData= await response.json()
+    const {title}=data.data;
+    return {title: `Art ${title}` };
+}
+
+
 const ArtWork = async ({params}:ArtParams) => {
     const response  = await fetch(`https://api.artic.edu/api/v1/artworks/${params.artId}`)
     const data: ArtData= await response.json()

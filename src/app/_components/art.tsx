@@ -13,22 +13,6 @@ type artTypes = {
 };
 const Art = ({art,image_url}:artTypes) => {
    
-    
-  // return (
-  //   <Link href={`${art.id}`}>
-  //    <div className=' border-primary-800 border flex flex-col '>
-  //       <div className='w-[500px] h-[400px] relative aspect-square'>
-  //           <Image alt='art_image'quality={100}
-  //          layout='fill'
-  //            className=' border-r border-primary-800 object-cover'
-  //           src={`${image_url}/${art.image_id}/full/843,/0/default.jpg`}/>
-  //       </div>
-  //       <h4 className='text-accent-500 mt-2 font-medium text-2xl  text-center'>Title:{art.title}</h4>
-       
-  //   </div>
-  //   </Link>
-   
-  // )
   return (
     <Link href={`${art.id}`}>
     <div className="flex border-primary-800 border ">
