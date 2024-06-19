@@ -24,7 +24,7 @@ type ArtParams = {
       iiif_url: string;
     };
   };
-  
+
   export const generateMetadata = async ({params}:ArtParams)=>{
     const response = await fetch(`https://api.artic.edu/api/v1/artworks/${params.artId}`);
     const data: ArtData= await response.json()
@@ -49,12 +49,14 @@ return (
         </div>
 
         <div>
-          <h3 className="text-accent-100 font-black text-2xl mb-5 translate-x-[-254px] bg-primary-950 p-6 pb-1 w-[150%]">
+          <h3 className="text-accent-100 font-black text-2xl mb-5 translate-x-[-254px] bg-primary-950 p-6 pb-1 w-[150%] hidden md:block">
            {medium_display}
           </h3>
 
           <p className="text-lg text-primary-300 mb-10">
-          <TextExpander>{description}</TextExpander>
+          <TextExpander>
+          <div dangerouslySetInnerHTML={{ __html: description }} />
+            </TextExpander>
            </p>
 
           <ul className="flex flex-col gap-4 mb-7">

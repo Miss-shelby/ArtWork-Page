@@ -24,11 +24,11 @@ const ArtList = async () => {
    
   return (
     <div>
-    <ul className='grid sm:grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 xl:gap-14'>
+    <div className='grid sm:grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 xl:gap-14'>
       {artsArray.map((art: ArtTypes) => (
        <Art key={art.id} art={art} image_url={image_url}/>
       ))}
-    </ul>
+    </div>
   </div>
   )
 }

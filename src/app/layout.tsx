@@ -4,7 +4,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import {Josefin_Sans} from 'next/font/google'
 export const metadata: Metadata = {
-  title: 'Artwork App',
+  title: 'Artwork Artsy',
 };
 const josefin = Josefin_Sans({
   subsets:['latin'],

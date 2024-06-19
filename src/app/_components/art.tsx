@@ -41,12 +41,12 @@ const Art = ({art,image_url}:artTypes) => {
         </div>
 
         <div className="bg-primary-950 border-t border-t-primary-800 text-right">
-          <Link
+          <a
             href={`${art.id}`}
             className="border-l border-primary-800 py-4 px-6 inline-block hover:bg-accent-600 transition-all hover:text-primary-900"
           >
            Learn More &rarr;
-          </Link>
+          </a>
         </div>
       </div>
     </div>

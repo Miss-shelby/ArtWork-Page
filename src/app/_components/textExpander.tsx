@@ -2,13 +2,6 @@
 import { useState } from 'react';
 function TextExpander({ children }:{children:React.ReactNode}) {
   const [description, setDescription] = useState<boolean>(false);
-
-  if (typeof children !== 'string') {
-    console.error('TextExpander children should be a string');
-    return null;
-  }
-
-
   return (
     <span>
      
