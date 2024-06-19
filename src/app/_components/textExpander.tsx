@@ -1,15 +1,13 @@
 "use client"
 import { useState } from 'react';
 function TextExpander({ children }:{children:React.ReactNode}) {
-  const [description, setDescription] = useState<Boolean>(false);
+  const [description, setDescription] = useState<boolean>(false);
 
   if (typeof children !== 'string') {
     console.error('TextExpander children should be a string');
     return null;
   }
-//   const displayText = isExpanded
-//     ? children
-//     : children.split(' ').slice(0, 10).join(' ') + '...';
+
 
   return (
     <span>
